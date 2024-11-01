@@ -12,16 +12,20 @@ import Link from "next/link";
 import { FaCameraRetro } from "react-icons/fa";
 import { ReactNode } from "react";
 import useToast from "@/app/ui/useToast";
-import emailjs from "@emailjs/browser";
-import { useFormik } from "formik";
+import emailjs , { EmailJSResponseStatus } from "@emailjs/browser";
+import { useFormik, FormikErrors } from "formik";
 import { useState } from "react";
 
 interface RevealProps {
   children: ReactNode;
 }
+interface FormValues {
+  email:string;
+}
 
-const validate = (value: any) => {
-  const errors: any = {};
+
+const validate = (value: FormValues): FormikErrors<FormValues> => {
+  const errors:FormikErrors<FormValues> = {};
   if (!value.email) {
     errors.email = "Required";
   } else if (
@@ -65,13 +69,13 @@ export default function Footer() {
           process.env.NEXT_PUBLIC_PUBLIC_KEY as string
         )
         .then(
-          (result: any) => {
+          (result: EmailJSResponseStatus) => {
             notifySuccess(result.text);
 
             setIsSubmitting(false);
             formik.resetForm();
           },
-          (error: any) => {
+          (error: {text: string}) => {
             notifyError(error.text);
 
             setIsSubmitting(false);

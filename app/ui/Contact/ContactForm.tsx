@@ -1,11 +1,17 @@
 "use client";
 import { useState } from "react";
-import { useFormik } from "formik";
-import emailjs from "@emailjs/browser";
 import { ToastContainer } from "react-toastify";
 import useToast from "@/app/ui/useToast";
-const validate = (value: any) => {
-  const errors: any = {};
+import emailjs from "@emailjs/browser";
+import { useFormik, FormikErrors } from "formik";
+
+interface FormValues {
+  email:string;
+  name:string;
+  message:string;
+}
+const validate = (value: FormValues) => {
+  const errors: FormikErrors<FormValues> = {};
 
   if (!value.name) {
     errors.name = "Name is required";

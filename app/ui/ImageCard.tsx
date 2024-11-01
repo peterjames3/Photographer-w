@@ -2,7 +2,6 @@
 "use client";
 import Image from "next/image";
 import { FaRegHeart } from "react-icons/fa";
-import { MdOutlineTimer } from "react-icons/md";
 
 interface CardItem {
   image: string;

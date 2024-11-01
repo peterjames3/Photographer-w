@@ -1,11 +1,13 @@
 'use client';
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { ReactNode } from 'react';
+import { useEffect, useRef, ReactNode } from "react";
+
+interface RevealProps {
+  children:ReactNode;
+}
 
 
-
-function Reveal({ children }) {
+function Reveal({ children }: RevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();

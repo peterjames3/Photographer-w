@@ -1,10 +1,6 @@
 "use client";
-import { useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
-import { MdOutlineTimer } from "react-icons/md";
 import Card from "@/app/ui/Card";
-import Images from "next/image";
-import TitleAnimate from '@/components/ui/TitleAnimate'
+import TitleAnimate from '@/components/ui/TitleAnimate';
 
 const items = [
   {

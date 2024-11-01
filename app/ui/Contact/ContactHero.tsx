@@ -19,7 +19,7 @@ export default function ConctactHero() {
       <div className="wrapper absolute text-white top-1/2 left-[45%] transition -translate-x-[50%] -translate-y-[50%]">
         {" "}
         <h2 className=" text-3xl">
-             Let's Capture Your Next Big Moment!
+             Let&apos;s Capture Your Next Big Moment!
         </h2>
       </div>
     </header>
