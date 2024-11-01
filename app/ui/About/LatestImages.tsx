@@ -40,7 +40,7 @@ const items = [
   },
   {
     image: "/natures-beauty-shines-multi-colored-floral-decoration-generative-ai.jpg",
-    title: "Nature",
+    title: "Nature ",
     heading: "Stunning Nature Photography",
     description: "Highlighting the beauty of nature through vibrant and inspiring images.",
   },
