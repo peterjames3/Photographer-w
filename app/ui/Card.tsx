@@ -7,8 +7,7 @@ import { MdOutlineTimer } from "react-icons/md";
 interface CardItem {
   image: string;
   title: string;
-  heading: string;
-  description: string;
+
 }
 
 interface CardProps {
