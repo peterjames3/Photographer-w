@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+}
+
+@layer base {
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-xl sm:text-2xl font-semibold text-gray-300;
+  }
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+  p {
+    @apply text-sm sm:text-xl;
+  }
+  :root {
+    --radius: 0.5rem;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@layer components {
+  .wrapper {
+    @apply max-w-[70rem] mx-auto py-3 my-2;
+  }
+  .btn {
+    @apply px-3 py-3 rounded-md text-white font-medium hover:cursor-pointer bg-[#ab5d00] hover:bg-[#e07b00] transition-all delay-300;
+  }
+}
