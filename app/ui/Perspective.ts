@@ -5,7 +5,7 @@ export const perspective = {
         translateY: 80,
         translateX: -20,
     },
-    enter: (i) => ({
+    enter: (i: number) => ({
         opacity: 1,
         rotateX: 0,
         translateY: 0,
